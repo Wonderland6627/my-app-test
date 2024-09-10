@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 function Square({ value, onSquareClick }) {
   return <button className="square" onClick={onSquareClick}>
@@ -30,6 +31,9 @@ export default function Board() {
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
   }
+  useEffect(() => {
+    document.title = "个人学习经验分享"
+  })
   return (
     // <>
     //   <div className="status">{status}</div>
